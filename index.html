@@ -229,17 +229,23 @@
         <a href="https://linkedin.com/in/Asadullah-nadeem" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="container">
-        <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome Extension Icon" class="header-icon">
+        <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome Extension Icon" class="header-icon" >
         <h1>Discover Chrome Extensions</h1>
-        <p>Enter a Chrome Web Store URL to add an extension or browse our collection.</p>
+        <p>Search our collection of browser extensions.</p>
     </div>
 </header>
 
 <main class="container">
+    <!-- Search and Add Section -->
     <div class="search-container">
-        <i class="fas fa-plus search-icon"></i>
-        <input type="text" id="add-url-input" class="form-control search-input" placeholder="Enter Chrome Extension URL to add...">
+        <i class="fas fa-search search-icon"></i>
+
+        <input type="text" id="search-input" class="form-control search-input" placeholder="Search for extensions...">
     </div>
+
+
+
+    <!-- Extension Cards -->
     <div id="extension-list" class="row g-4">
         <!-- Extension cards will be dynamically inserted here -->
     </div>
@@ -578,11 +584,17 @@
 <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
     document.addEventListener('DOMContentLoaded', () => {
-        const addUrlInput = document.getElementById('add-url-input');
         const extensionList = document.getElementById('extension-list');
+        const searchInput = document.getElementById('search-input');
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptCookiesBtn = document.getElementById('accept-cookies');
 
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filtered = extensions.filter(ext => ext.name.toLowerCase().includes(searchTerm));
+            renderExtensions(filtered);
+        });
         // --- Cookie Consent Logic ---
         const getCookie = (name) => {
             const value = `; ${document.cookie}`;
@@ -657,44 +669,14 @@
             });
         };
 
-        const addExtensionFromUrl = (url) => {
-            if (!url.startsWith('https://chrome.google.com/webstore/detail/')) {
-                alert('Please enter a valid Chrome Web Store extension URL.');
-                return;
-            }
-
-            try {
-                const urlParts = url.split('/');
-                let name = urlParts[urlParts.length - 2].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                const newExtension = {
-                    name: name,
-                    url: url,
-                    icon: `https://placehold.co/80x80/2980b9/white?text=${name.charAt(0)}`
-                };
-
-                if (!extensions.some(ext => ext.url === newExtension.url)) {
-                    extensions.unshift(newExtension);
-                    renderExtensions();
-                } else {
-                    alert('This extension is already in the list.');
-                }
-                addUrlInput.value = '';
-
-            } catch (error) {
-                console.error("Error parsing URL:", error);
-                alert("Could not add the extension. Please check the URL.");
-            }
-        };
-
-        // --- Event Listeners ---
-        addUrlInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && addUrlInput.value.trim() !== '') {
-                addExtensionFromUrl(addUrlInput.value.trim());
-            }
-        });
 
         // Initial Render
         renderExtensions();
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filtered = extensions.filter(ext => ext.name.toLowerCase().includes(searchTerm));
+            renderExtensions(filtered);
+        });
     });
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
