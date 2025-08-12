@@ -1,379 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrome Extension Showcase - Discover & Add New Extensions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Extension Showcase - Discover & Add New Extensions</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection to enhance your browser experience.">
-    <meta name="keywords" content="chrome extensions, extensions, chrome web store, browser extensions, productivity, tools">
-    <link rel="canonical" href="https://ex.codeaxe.co.in/"> <!--! IMPORTANT: Change this to your actual domain -->
+  <meta name="description"
+    content="A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection to enhance your browser experience.">
+  <meta name="keywords"
+    content="chrome extensions, extensions, chrome web store, browser extensions, productivity, tools">
+  <link rel="canonical" href="https://ex.codeaxe.co.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ex.codeaxe.co.in/">
+  <meta property="og:title" content="Chrome Extension Showcase - Discover & Add New Extensions">
+  <meta property="og:description"
+    content="A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection.">
+  <meta property="og:image" content="https://www.google.com/chrome/static/images/chrome-logo.svg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ex.codeaxe.co.in/">
+  <meta property="twitter:title" content="Chrome Extension Showcase - Discover & Add New Extensions">
+  <meta property="twitter:description"
+    content="A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection.">
+  <meta property="twitter:image" content="https://www.google.com/chrome/static/images/chrome-logo.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ex.codeaxe.co.in/"> <!--! IMPORTANT: Change this to your actual domain -->
-    <meta property="og:title" content="Chrome Extension Showcase - Discover & Add New Extensions">
-    <meta property="og:description" content="A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection.">
-    <meta property="og:image" content="https://www.google.com/chrome/static/images/chrome-logo.svg"> <!-- Using the header logo for sharing -->
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ex.codeaxe.co.in/"> <!--! IMPORTANT: Change this to your actual domain -->
-    <meta property="twitter:title" content="Chrome Extension Showcase - Discover & Add New Extensions">
-    <meta property="twitter:description" content="A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection.">
-    <meta property="twitter:image" content="https://www.google.com/chrome/static/images/chrome-logo.svg"> <!-- Using the header logo for sharing -->
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- JSON-LD Schema Markup -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "url": "https://ex.codeaxe.co.in/",
-            "name": "Chrome Extension Showcase",
-            "description": "A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection to enhance your browser experience.",
-            "publisher": {
-                "@type": "Organization",
-                "name": "Ext-Showcase",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.google.com/chrome/static/images/chrome-logo.svg"
-                }
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://ex.codeaxe.co.in/",
+        "name": "Chrome Extension Showcase",
+        "description": "A curated showcase of the best Chrome extensions. Add new extensions by URL and browse our collection to enhance your browser experience.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Ext-Showcase",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.google.com/chrome/static/images/chrome-logo.svg"
             }
         }
+    }
     </script>
-    <style>
-        :root {
-            --primary-color: #16a085;
-            --secondary-color: #2980b9;
-            --background-color: #f4f7f6;
-            --card-bg-color: #ffffff;
-            --text-color: #333;
-            --light-text-color: #f0f2f5;
-            --btn-color: #3498db;
-        }
+  <style>
+    :root {
+      --primary-color: #16a085;
+      --secondary-color: #2980b9;
+      --background-color: #f4f7f6;
+      --card-bg-color: #ffffff;
+      --text-color: #333;
+      --light-text-color: #f0f2f5;
+      --btn-color: #3498db;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
 
-        .social-icons {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            z-index: 10;
-        }
+    .social-icons {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      z-index: 10;
+    }
 
-        .social-icons a {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.5rem;
-            margin-left: 15px;
-            transition: color 0.3s ease;
-        }
+    .social-icons a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.5rem;
+      margin-left: 15px;
+      transition: color 0.3s ease;
+    }
 
-        .social-icons a:hover {
-            color: #ffffff;
-        }
+    .social-icons a:hover {
+      color: #ffffff;
+    }
 
-        .header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-        }
+    .header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+      position: relative;
+    }
 
-        .header-icon {
-            width: 70px;
-            height: 70px;
-            margin-bottom: 1rem;
-        }
+    .header-icon {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 1rem;
+    }
 
-        .header h1 {
-            font-weight: 700;
-            font-size: 3.5rem;
-        }
+    .header h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+    }
 
-        .header p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-        }
+    .header p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+    }
 
-        .search-container {
-            max-width: 700px;
-            margin: -2rem auto 3rem;
-            position: relative;
-        }
+    .search-container {
+      max-width: 700px;
+      margin: -2rem auto 3rem;
+      position: relative;
+    }
 
-        .search-input {
-            height: 55px;
-            border-radius: 50px;
-            padding-left: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
-        }
+    .search-input {
+      height: 55px;
+      border-radius: 50px;
+      padding-left: 50px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+    }
 
-        .search-icon {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #777;
-        }
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+    }
 
-        .extension-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            background-color: var(--card-bg-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
+    .extension-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: var(--card-bg-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
 
-        .extension-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+    .extension-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        .extension-card .card-img-top {
-            width: 80px;
-            height: 80px;
-            margin: 20px auto 10px;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    .extension-card .card-img-top {
+      width: 80px;
+      height: 80px;
+      margin: 20px auto 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+      /* Prevents image distortion */
+    }
 
-        .extension-card .card-body {
-            text-align: center;
-        }
+    .extension-card .card-body {
+      text-align: center;
+    }
 
-        .extension-card .card-title {
-            font-weight: 600;
-            color: var(--text-color);
-        }
+    .extension-card .card-title {
+      font-weight: 600;
+      color: var(--text-color);
+    }
 
-        .btn-primary {
-            background-color: var(--btn-color);
-            border-color: var(--btn-color);
-            color: white;
-            border-radius: 50px;
-            padding: 8px 25px;
-            font-weight: 500;
-            transition: background-color 0.2s ease;
-        }
+    .btn-primary {
+      background-color: var(--btn-color);
+      border-color: var(--btn-color);
+      color: white;
+      border-radius: 50px;
+      padding: 8px 25px;
+      font-weight: 500;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
 
-        .btn-primary:hover {
-            background-color: #2e86c1;
-            border-color: #2e86c1;
-            color: white;
-        }
+    .btn-primary:hover {
+      background-color: #2e86c1;
+      border-color: #2e86c1;
+      color: white;
+    }
 
-        .footer {
-            background-color: #2c3e50;
-            color: var(--light-text-color);
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
+    .no-results {
+      text-align: center;
+      color: #6c757d;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
 
-        .footer a {
-            color: var(--light-text-color);
-            text-decoration: none;
-            margin: 0 10px;
-        }
+    .footer {
+      background-color: #2c3e50;
+      color: var(--light-text-color);
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+    .footer a {
+      color: var(--light-text-color);
+      text-decoration: none;
+      margin: 0 10px;
+    }
 
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            z-index: 1000;
-            display: none;
-        }
+    .footer a:hover {
+      text-decoration: underline;
+    }
 
-        .cookie-banner p {
-            margin: 0;
-            display: inline;
-            margin-right: 15px;
-        }
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+      display: none;
+    }
 
-        .cookie-banner .btn-accept {
-            background-color: var(--primary-color);
-            border: none;
-            color: white;
-        }
-    </style>
+    .cookie-banner p {
+      margin: 0;
+      display: inline;
+      margin-right: 15px;
+    }
+
+    .cookie-banner .btn-accept {
+      background-color: var(--primary-color);
+      border: none;
+      color: white;
+    }
+  </style>
 </head>
+
 <body>
-<header class="header">
+  <header class="header">
     <div class="social-icons">
-        <a href="https://github.com/Asadullah-nadeem" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/Asadullah-nadeem" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Asadullah-nadeem" target="_blank" aria-label="GitHub"><i
+          class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/Asadullah-nadeem" target="_blank" aria-label="LinkedIn"><i
+          class="fab fa-linkedin"></i></a>
     </div>
     <div class="container">
-        <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome Extension Icon" class="header-icon" >
-        <h1>Discover Chrome Extensions</h1>
-        <p>Search our collection of browser extensions.</p>
+      <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome Extension Icon"
+        class="header-icon">
+      <h1>Discover Chrome Extensions</h1>
+      <p>A curated collection of useful browser extensions.</p>
     </div>
-</header>
+  </header>
 
-<main class="container">
-    <!-- Search and Add Section -->
+  <main class="container">
     <div class="search-container">
-        <i class="fas fa-search search-icon"></i>
-
-        <input type="text" id="search-input" class="form-control search-input" placeholder="Search for extensions...">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="search-input" class="form-control search-input" placeholder="Search for extensions...">
     </div>
 
-
-
-    <!-- Extension Cards -->
     <div id="extension-list" class="row g-4">
-        <!-- Extension cards will be dynamically inserted here -->
     </div>
-</main>
+  </main>
 
-<!-- Footer -->
-<footer class="footer">
+  <footer class="footer">
     <div class="container text-center">
-        <p class="mb-2">&copy; <span id="currentYear"></span> Ex-Codeaxe. All Rights Reserved.</p>
-        <div>
-            <a href="PrivacyPolicy.html">Privacy Policy</a>
-
-            <a href="Terms&Conditions.html">Terms & Conditions</a>
-        </div>
+      <p class="mb-2">© <span id="currentYear"></span> Ex-Codeaxe. All Rights Reserved.</p>
+      <div>
+        <a href="PrivacyPolicy.html">Privacy Policy</a>
+        <a href="Terms&Conditions.html">Terms & Conditions</a>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<div id="cookie-banner" class="cookie-banner">
+  <div id="cookie-banner" class="cookie-banner">
     <p>This website uses cookies to ensure you get the best experience.</p>
     <button id="accept-cookies" class="btn btn-accept btn-sm">Accept</button>
-</div>
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // --- Data: List of Extensions ---
+    // This array holds all the extension data. It's easy to add, remove, or edit extensions here.
+    const extensions = [
+      {
+        name: 'Focus Tool',
+        url: 'https://chromewebstore.google.com/detail/focus-tool-website-blocke/pnpgnpcciccaiabjpjifhilfhncmgfam',
+        icon: 'https://lh3.googleusercontent.com/ysG6zbE5BpK6y7bOS7T53Ao09jzkcvjirwsf3eImABf6WVVFJacNrX_7ktu2tOqRerGtafpxMM4CDk_V4if9mukulV0=s120'
+      }
+    ];
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
     document.addEventListener('DOMContentLoaded', () => {
-        const extensionList = document.getElementById('extension-list');
-        const searchInput = document.getElementById('search-input');
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptCookiesBtn = document.getElementById('accept-cookies');
+      // --- DOM Elements ---
+      const extensionList = document.getElementById('extension-list');
+      const searchInput = document.getElementById('search-input');
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptCookiesBtn = document.getElementById('accept-cookies');
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
 
+      // --- Functions ---
 
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            const filtered = extensions.filter(ext => ext.name.toLowerCase().includes(searchTerm));
-            renderExtensions(filtered);
-        });
-        // --- Cookie Consent Logic ---
-        const getCookie = (name) => {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
+      /**
+       * Renders a list of extension cards to the page.
+       * @param {Array} extensionsToRender - The array of extension objects to display.
+       */
+      const renderExtensions = (extensionsToRender) => {
+        extensionList.innerHTML = ''; // Clear previous results
+
+        if (extensionsToRender.length === 0) {
+          extensionList.innerHTML = '<div class="col-12"><p class="no-results"><i class="fas fa-search"></i> No extensions found matching your search.</p></div>';
+          return;
         }
 
-        const setCookie = (name, value, days) => {
-            let expires = "";
-            if (days) {
-                const date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-        }
-
-        if (!getCookie('cookie_consent')) {
-            cookieBanner.style.display = 'block';
-        }
-
-        acceptCookiesBtn.addEventListener('click', () => {
-            setCookie('cookie_consent', 'true', 365);
-            cookieBanner.style.display = 'none';
-        });
-
-
-        let extensions = [
-            {
-                name: 'Google Translate',
-                url: 'https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb',
-                icon: 'https://ssl.gstatic.com/chrome/webstore/images/icon_96px.png'
-            },
-            {
-                name: 'Grammarly',
-                url: 'https://chrome.google.com/webstore/detail/grammarly-grammar-checker/kbfnbcaeplbcioakkpcpgfkobkghlhen',
-                icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Grammarly_logo.svg/1200px-Grammarly_logo.svg.png'
-            },
-            {
-                name: 'ColorZilla',
-                url: 'https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp',
-                icon: 'https://lh3.googleusercontent.com/t_22i46v_p-hS23e_n_G_IYA2pew0z15J2c9gI9e4sO4ySv2pD2yO1Yd2Fp9ySBC0yD1=s128'
-            },
-            {
-                name: 'AdBlock',
-                url: 'https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom',
-                icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/AdBlock_logo.svg/1200px-AdBlock_logo.svg.png'
-            }
-        ];
-
-        const renderExtensions = () => {
-            extensionList.innerHTML = '';
-            if (extensions.length === 0) {
-                extensionList.innerHTML = '<p class="text-center text-muted col-12">No extensions found. Add one using the URL bar above!</p>';
-                return;
-            }
-            extensions.forEach(ext => {
-                const col = document.createElement('div');
-                col.className = 'col-lg-3 col-md-4 col-sm-6';
-                col.innerHTML = `
-                        <div class="card extension-card h-100">
-                            <img src="${ext.icon}" class="card-img-top" alt="${ext.name} icon" onerror="this.src='https://placehold.co/80x80/16a085/white?text=Icon'">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${ext.name}</h5>
-                                <a href="${ext.url}" target="_blank" class="btn btn-primary mt-auto">
-                                    <i class="fas fa-external-link-alt"></i> Get Extension
-                                </a>
-                            </div>
+        extensionsToRender.forEach(ext => {
+          const col = document.createElement('div');
+          // Improved responsive columns for better layout across devices
+          col.className = 'col-xl-3 col-lg-4 col-md-6 col-12';
+          col.innerHTML = `
+                    <div class="card extension-card h-100">
+                        <img src="${ext.icon}" class="card-img-top" alt="${ext.name} icon" onerror="this.src='https://placehold.co/80x80/16a085/white?text=Icon'">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${ext.name}</h5>
+                            <a href="${ext.url}" target="_blank" class="btn btn-primary mt-auto" aria-label="Get the ${ext.name} extension">
+                                <i class="fas fa-external-link-alt"></i> Get Extension
+                            </a>
                         </div>
-                    `;
-                extensionList.appendChild(col);
-            });
-        };
-
-
-        // Initial Render
-        renderExtensions();
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            const filtered = extensions.filter(ext => ext.name.toLowerCase().includes(searchTerm));
-            renderExtensions(filtered);
+                    </div>
+                `;
+          extensionList.appendChild(col);
         });
-    });
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      };
 
+      /**
+       * Handles the live search functionality.
+       */
+      const handleSearch = () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filtered = extensions.filter(ext => ext.name.toLowerCase().includes(searchTerm));
+        renderExtensions(filtered);
+      };
+
+      // --- Cookie Consent Logic ---
+      const getCookie = (name) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+
+      const setCookie = (name, value, days) => {
+        let expires = "";
+        if (days) {
+          const date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=Lax; Secure`;
+      }
+
+      if (!getCookie('cookie_consent')) {
+        cookieBanner.style.display = 'block';
+      }
+
+      acceptCookiesBtn.addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        cookieBanner.style.display = 'none';
+      });
+
+      // --- Event Listeners ---
+      searchInput.addEventListener('input', handleSearch);
+
+      // --- Initial Render ---
+      // Display all extensions when the page first loads.
+      renderExtensions(extensions);
+    });
+
+    // --- Google Analytics ---
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
     gtag('config', 'G-TVJGHN5S93');
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVJGHN5S93"></script>
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVJGHN5S93"></script>
 
 </body>
+
 </html>
